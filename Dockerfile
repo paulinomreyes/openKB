@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-RUN apk add --update nodejs
+RUN apk add --update nodejs nodejs-npm
 
 RUN adduser -u 1000 -S barry -G root
 WORKDIR /var/openKB
