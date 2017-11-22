@@ -14,7 +14,7 @@ COPY config/ /var/openKB/config/
 COPY app.js /var/openKB/
 COPY package.json /var/openKB/
 
-RUN npm install
+RUN sudo npm install
 
 VOLUME /var/openKB/data
 
