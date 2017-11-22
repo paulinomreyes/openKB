@@ -4,7 +4,6 @@ RUN apk add --update nodejs
 
 RUN adduser -u 1000 -S barry -G root
 WORKDIR /var/openKB
-RUN chown -R barry:root /var/openKB/
 
 COPY locales/ /var/openKB/locales/
 COPY public/ /var/openKB/public/
@@ -14,10 +13,11 @@ COPY config/ /var/openKB/config/
 COPY app.js /var/openKB/
 COPY package.json /var/openKB/
 
-RUN sudo npm install
+RUN npm install
 
 VOLUME /var/openKB/data
 
+RUN chown -R barry:root /var/openKB/
 
 EXPOSE 4444
 
