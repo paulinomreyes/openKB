@@ -13,11 +13,11 @@ COPY config/ /var/openKB/config/
 COPY app.js /var/openKB/
 COPY package.json /var/openKB/
 
-RUN chown -R barry:root /var/openKB
-
 RUN npm install
 
 VOLUME /var/openKB/data
+
+RUN chown -R barry:root /var/openKB
 
 EXPOSE 4444
 
