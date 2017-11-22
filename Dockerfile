@@ -2,7 +2,6 @@ FROM alpine:3.5
 
 RUN apk add --update nodejs
 
-WORKDIR /var/openKB
 
 COPY locales/ /var/openKB/locales/
 COPY public/ /var/openKB/public/
